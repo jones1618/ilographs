@@ -25,7 +25,7 @@ resources:
     description: This is an important resource
     
 perspectives:
-- name: Sample
+- name: Dependencies
   defaultRelationLabel: Depends on
   color: royalblue
   relations:
@@ -44,7 +44,7 @@ perspectives:
     Your ilograph comes pre-populated with resources and a sample perspective. **The editable source is in the window to the left**.
 
     Need Help? Check out the [introduction to IDL](https://blog.ilograph.com/posts/idl-1/) and the [IDL Spec](https://blog.ilograph.com/posts/idl-spec/). Additional resources are available on the [ilograph blog](https://blog.ilograph.com/).
-- name: Interface
+- name: Interfaces
   defaultRelationLabel: Calls
   color: DarkTurquoise
   relations: 
