@@ -1,0 +1,68 @@
+resources:
+- name: My Company
+  subtitle: Parent Resource
+  color: navy
+  children:
+  - name: Resource A
+    subtitle: A resource
+    children: 
+    - name: A sub 1
+    - name: A sub 2
+    - name: A sub 3
+    
+  - name: Resource B
+    subtitle: Another resource
+    description: This is an extended description of Resource B
+- name: Company 2
+  subtitle: Another one
+  children:
+  - name: Resource C
+    subtitle: A third resource
+    
+  - name: Resource D
+    subtitle: A fourth resource
+    color: firebrick
+    description: This is an important resource
+    
+perspectives:
+- name: Sample
+  defaultRelationLabel: Depends on
+  color: royalblue
+  relations:
+  - from: Resource A
+    to: Resource B
+    
+  - from: Resource B
+    to: Resource C
+    
+  - from: Resource B
+    to: Resource D
+    label: Custom label
+  notes: |-
+    Welcome to your ilograph.
+
+    Your ilograph comes pre-populated with resources and a sample perspective. **The editable source is in the window to the left**.
+
+    Need Help? Check out the [introduction to IDL](https://blog.ilograph.com/posts/idl-1/) and the [IDL Spec](https://blog.ilograph.com/posts/idl-spec/). Additional resources are available on the [ilograph blog](https://blog.ilograph.com/).
+- name: Interface
+  defaultRelationLabel: Calls
+  color: DarkTurquoise
+  relations: 
+  - from: Resource A
+    to: Resource B
+    
+  - from: Resource C
+    to: Resource B
+    
+  - from: Resource A
+    to: Resource C
+    
+  - from: Resource B
+    to: Resource A
+    
+  - from: Resource C
+    to: Resource D
+  - from: Resource B
+    to: Resource D
+  notes: These are interfaces
+
